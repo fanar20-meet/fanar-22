@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- the user's profie  -->
+
+    <title>User: {{ user.name }}</title>
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='style.css')}}">
+</head>
+<body>
+<!-- 	<form action ="/delete/<student_id" method="post">
+		<input type="submit" name="submit" value="delete">
+	</form> -->
+    <h1>{{ user.name }}</h1>
+	<p>
+
+	year of birth: {{user.year}}<br>
+	</p>                                                                                                                                            
+<a class=link href="{{url_for('about')}}">let's learn about the body parts !</a>
+<br>
+<button id="button1" style="font-size:15px" onclick="function1()">I've learned about a new thing<i class="fa fa-check"></i></button>
+<br>
+<p> body parts i've learned about : <p id="number"> {{user.num}} </p></p> 
+
+<script>
+	function function1(){
+		document.getElementById('number').innerHTML += 1;
+	}
+	</script>
+</body>
+</html>

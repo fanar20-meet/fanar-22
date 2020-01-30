@@ -1,0 +1,23 @@
+<DOCTYPE html>
+<html>
+<head>
+    <title>profile</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style.css') }}">
+</head>
+<body>
+    <h1>trial</h1>
+    
+    <hr>
+    
+    <!-- {% for user in users %} -->
+    <p>
+	    Name: <a href="{{url_for('display_user', name=user.name)}}">{{user.name}}</a><br>
+	    Class: {{user.year}}<br>
+    </p>
+    <!-- {% endfor %} -->
+
+    <a href="{{url_for('signup')}}">signup for a new account</a>
+
+body parts i've learned about : {{num}}
+</body>
+</html>
